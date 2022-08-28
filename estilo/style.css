@@ -31,27 +31,15 @@ a{
     flex-direction: row;
 }
 
-.mario{
+.cards{
     display: flex;
     flex-direction: column;
     background: linear-gradient(#07afc5,#066806);
     margin: 20px;
 }
 
-.pacManIMG{
+.IMG{
     width: 200px;
-    margin: 20px;
-}
-
-.marioIMG{
-    width: 200px;
-    margin: 20px;
-}
-
-.pacMan{
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(#07afc5,#066806);
     margin: 20px;
 }
 
@@ -70,4 +58,15 @@ a{
 .button:hover{
     transform: scale(1.1);
     background-color: rgb(184, 52, 52);
+}
+
+.btnBandeira{
+    margin-top: 74px;
+}
+
+.imgBandeira{
+    display: flex;
+    border: 3px solid black;
+    margin: 70px 20px 0px 20px;
+    height: 110px;
 }

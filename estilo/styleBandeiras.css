@@ -32,13 +32,13 @@ button{
     border-radius: 5px;
     font-size: 12px;
     padding: 5px 10px 5px 10px;
+    margin: 15px;
 }
 
 button:hover{
     background-color: rgb(184, 60, 60);
     transform: scale(1.15);
     cursor: pointer;
-
 }
 
 input{
@@ -62,14 +62,11 @@ textarea:focus, input:focus{
     font-size: 20px;
 }
 
-a{
-    display: flex;
-    justify-content: right;
-    padding: 20px 20px 0px 0px;
-    text-decoration: none;
+a:visited {
     color: white;
 }
 
-a:visited {
-    color: white;
+.buttons{
+    display: flex;
+    flex-direction: row;
 }

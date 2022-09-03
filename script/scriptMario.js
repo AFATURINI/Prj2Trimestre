@@ -1,6 +1,8 @@
 const $pipe = document.querySelector(".pipe");
 const $mario = document.querySelector(".mario");
 const $placar = document.querySelector(".placar");
+const $clouds = document.querySelector(".clouds");
+const $gameOver = document.querySelector(".mensagem");
 
 let contador = 0
 
@@ -14,11 +16,15 @@ const jump = () =>{
     },500);
 }
 
+const musica = new Audio("./audios/MusicaDoMario.mpeg");
+musica.play();
+musica.playbackRate = 1;
 
 const loop = setInterval(() =>{
 
     const $pipePosition = $pipe.offsetLeft;
     const $marioPosition = +window.getComputedStyle($mario).bottom.replace("px", "");
+    const $cloudsPosition = $clouds.offsetLeft;
 
     if($pipePosition <= 135 && $pipePosition > 0 && $marioPosition <= 80){
 
@@ -32,7 +38,16 @@ const loop = setInterval(() =>{
         $mario.style.width = "75px";
         $mario.style.marginLeft = "50px";
 
+        $clouds.style.animation = "none";
+        $clouds.style.left = `${$cloudsPosition}px`
 
+        musica.pause();
+
+        const musicaMorte = new Audio("./audios/SomDeMorte.mpeg");
+        musicaMorte.play();
+        musicaMorte.playbackRate = 1;
+
+        $gameOver.style.visibility = "visible";
 
         clearInterval(loop);
         clearInterval(loop2);

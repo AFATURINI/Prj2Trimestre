@@ -1,6 +1,7 @@
 const $ghost = document.querySelector(".ghost");
 const $pacMan = document.querySelector(".pac-man");
 const $placar = document.querySelector(".placar");
+const $gameOver = document.querySelector(".mensagem");
 
 let contador = 0
 
@@ -39,6 +40,8 @@ const loop = setInterval(() =>{
 
         clearInterval(loop);
         clearInterval(loop2);
+
+        $gameOver.style.visibility = "visible";
 
     }
 })

@@ -55,6 +55,43 @@ a:visited {
     animation: jump 500ms ease-out;
 }
 
+.mensagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(18, 12, 99, 0.8);
+    border: 5px solid black;
+    border-radius: 15px;
+    position: absolute;
+    right: 40%;
+    top: 20%;
+    visibility: hidden;
+}
+
+button{
+    display: flex;
+    border: 5px solid black;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px 20px 27px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color: rgb(184, 52, 52);
+}
+
+.gameOver{
+    color: white;
+}
+
 @keyframes ghost-animation {
     from {
         right: -80px;
